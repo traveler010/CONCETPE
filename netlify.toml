@@ -1,0 +1,24 @@
+# Netlify Configuration for CONCEPTPE
+# Frontend-only deployment (static HTML/CSS/JS)
+
+[build]
+  # Base directory: Netlify runs commands from here
+  base = "frontend/"
+  # Publish directory is relative to base — "." means frontend/ itself
+  publish = "."
+  # No build step needed — this is a plain HTML/CSS/JS site
+  command = "echo 'Static site — no build needed'"
+
+# SPA-style redirect: serve index.html for all routes
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
