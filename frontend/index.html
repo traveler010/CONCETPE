@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CONCEPTPE - Unlock Your Potential. Master concepts in Mathematics, Science, Computer Science, and Exam Preparation with clear, concept-first learning.">
+  <meta name="keywords" content="CONCEPTPE, Unlock Your Potential, education, concept learning, mathematics, science, computer science, exam preparation, study notes">
+  <meta name="author" content="CONCEPTPE">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="CONCEPTPE — Unlock Your Potential">
+  <meta property="og:description" content="Learn Better. Understand Concepts. Unlock Your Potential. Academic excellence through concept-first education.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/conceptpe-logo.png">
+
+  <title>CONCEPTPE — Unlock Your Potential</title>
+
+  <!-- Google Fonts: Outfit (Headings) & Plus Jakarta Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="assets/images/conceptpe-logo.png">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Immediate Theme Initializer to prevent flash of unstyled theme -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('conceptpe_theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar" role="region" aria-label="Announcement">
+    <div class="container announcement-content">
+      <span class="announcement-badge">New</span>
+      <p class="announcement-text">
+        Welcome to <strong>CONCEPTPE</strong> — Unlock Your Potential through Concept-First Learning.
+      </p>
+      <a href="https://www.youtube.com/@Conceptpe" target="_blank" rel="noopener noreferrer" class="announcement-link">
+        Visit YouTube Channel
+        <svg class="icon-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Primary Navigation -->
+  <header class="navbar-wrapper" id="navbar">
+    <nav class="navbar container" aria-label="Main Navigation">
+      <!-- Brand Logo -->
+      <a href="#home" class="nav-brand" aria-label="CONCEPTPE Home">
+        <div class="brand-logo-frame">
+          <img src="assets/images/conceptpe-logo.png" alt="CONCEPTPE Official Logo" class="brand-logo" width="44" height="44">
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">CONCEPT<span class="brand-accent">PE</span></span>
+          <span class="brand-tagline">Unlock Your Potential</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+        <li class="nav-item"><a href="#courses" class="nav-link">Academic Curriculum</a></li>
+        <li class="nav-item"><a href="#videos" class="nav-link">Video Lectures &amp; Tutorials</a></li>
+        <li class="nav-item"><a href="#resources" class="nav-link">Study Resources</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Action Items (Right) -->
+      <div class="nav-actions">
+        <!-- Dark / Light Theme Toggle -->
+        <button type="button" class="theme-toggle-btn" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
+          <span class="theme-icon light-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </span>
+          <span class="theme-icon dark-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </span>
+        </button>
+
+        <!-- YouTube CTA Button in Nav -->
+        <a href="https://www.youtube.com/@Conceptpe" target="_blank" rel="noopener noreferrer" class="btn btn-youtube-nav" aria-label="Watch CONCEPTPE on YouTube">
+          <svg class="icon-youtube" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+          <span>Watch on YouTube</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer Menu Overlay -->
+  <div class="mobile-drawer-overlay" id="drawerOverlay" tabindex="-1"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation Menu">
+    <div class="drawer-header">
+      <div class="brand-text">
+        <span class="brand-name">CONCEPT<span class="brand-accent">PE</span></span>
+        <span class="brand-tagline">Unlock Your Potential</span>
+      </div>
+      <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="#home" class="mobile-nav-link active">Home</a></li>
+      <li><a href="#courses" class="mobile-nav-link">Academic Curriculum</a></li>
+      <li><a href="#videos" class="mobile-nav-link">Video Lectures &amp; Tutorials</a></li>
+      <li><a href="#resources" class="mobile-nav-link">Study Resources</a></li>
+      <li><a href="#about" class="mobile-nav-link">About</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <a href="https://www.youtube.com/@Conceptpe" target="_blank" rel="noopener noreferrer" class="btn btn-youtube w-full">
+        <svg class="icon-youtube" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+        </svg>
+        <span>Watch on YouTube</span>
+      </a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- SECTION 1: HOME (HERO) -->
+    <section class="hero-section" id="home">
+      <div class="hero-bg-glow hero-bg-glow-1"></div>
+      <div class="hero-bg-glow hero-bg-glow-2"></div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-tag-pill">
+            <span class="hero-tag-dot"></span>
+            <span>Concept-First Academic Platform</span>
+          </div>
+          <h1 class="hero-title">
+            Learn Better. <br>
+            <span class="gradient-text">Understand Concepts.</span> <br>
+            Unlock Your Potential.
+          </h1>
+          <p class="hero-subtitle">
+            Welcome to <strong>CONCEPTPE</strong>. We replace rote memorization with deep conceptual clarity. Master Mathematics, Science, Computer Science, and Exam Preparation with clear, structured learning.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#courses" class="btn btn-primary" id="heroExploreBtn">
+              <span>Explore Learning</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@Conceptpe" target="_blank" rel="noopener noreferrer" class="btn btn-outline-youtube" id="heroYoutubeBtn">
+              <svg class="icon-youtube" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+              <span>Watch on YouTube</span>
+            </a>
+          </div>
+
+          <!-- Quick Value Stats/Features -->
+          <div class="hero-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <div>
+                <strong class="highlight-title">100% Concept-First</strong>
+                <span class="highlight-desc">Rooted in fundamental principles</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
+              <div>
+                <strong class="highlight-title">Academic Precision</strong>
+                <span class="highlight-desc">Aligned with standard curriculum</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <strong class="highlight-title">Self-Paced Learning</strong>
+                <span class="highlight-desc">Revisit complex topics anytime</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Showcase -->
+        <div class="hero-visual">
+          <div class="hero-card-stack">
+            <div class="hero-floating-badge badge-top">
+              <div class="badge-icon-wrap green-glow">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <div>
+                <p class="badge-label">Clarity Score</p>
+                <p class="badge-value">Conceptual Mastery</p>
+              </div>
+            </div>
+
+            <!-- Central Brand Card with Official Logo -->
+            <div class="hero-main-card">
+              <div class="hero-card-brand-header">
+                <div class="hero-card-logo-wrap">
+                  <img src="assets/images/conceptpe-logo.png" alt="CONCEPTPE Emblem" class="hero-card-logo" width="80" height="80">
+                </div>
+                <div class="hero-card-brand-info">
+                  <h3 class="hero-card-title">CONCEPTPE</h3>
+                  <p class="hero-card-motto">“Unlock Your Potential”</p>
+                </div>
+              </div>
+              <div class="hero-card-body">
+                <p class="hero-card-text">
+                  Bridging the gap between theory and practical intuition with structured educational workflows.
+                </p>
+                <div class="hero-card-pills">
+                  <span class="subject-pill">Mathematics</span>
+                  <span class="subject-pill">Science</span>
+                  <span class="subject-pill">Computer Science</span>
+                  <span class="subject-pill">Exam Preparation</span>
+                </div>
+              </div>
+              <div class="hero-card-footer">
+                <a href="#courses" class="btn btn-sm btn-subtle w-full">Browse Structured Modules &rarr;</a>
+              </div>
+            </div>
+
+            <div class="hero-floating-badge badge-bottom">
+              <div class="badge-icon-wrap amber-glow">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div>
+                <p class="badge-label">Curriculum Focus</p>
+                <p class="badge-value">High-Yield Topics</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: WHY CONCEPTPE -->
+    <section class="section section-why" id="why">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Academic Excellence</span>
+          <h2 class="section-title">Why Choose <span class="gradient-text">CONCEPTPE</span>?</h2>
+          <p class="section-description">
+            We focus on breaking down intricate academic concepts into intuitive, digestible building blocks that stick for life.
+          </p>
+        </div>
+
+        <div class="grid grid-4 feature-grid">
+          <!-- Feature 1 -->
+          <div class="feature-card">
+            <div class="feature-icon-box icon-navy">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+            </div>
+            <h3 class="feature-title">Concept-First Pedagogy</h3>
+            <p class="feature-text">
+              We eliminate mindless memorization. Every topic starts from core logic, intuitive diagrams, and first principles.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="feature-card">
+            <div class="feature-icon-box icon-green">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <h3 class="feature-title">Structured Study Notes</h3>
+            <p class="feature-text">
+              Handcrafted summaries, visual formula cheat-sheets, and step-by-step problem deconstructions ready for fast revision.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="feature-card">
+            <div class="feature-icon-box icon-amber">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+            </div>
+            <h3 class="feature-title">Exam-Oriented Strategy</h3>
+            <p class="feature-text">
+              Target high-yield topics, avoid common conceptual traps, and build speed through structured analytical frameworks.
+            </p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="feature-card">
+            <div class="feature-icon-box icon-blue">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3 class="feature-title">Interactive Visualizations</h3>
+            <p class="feature-text">
+              Clear mental models make difficult science and computational algorithms straightforward to visualize and retain.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: COURSES / LEARNING -->
+    <section class="section section-courses" id="courses">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header-left">
+            <span class="section-eyebrow">Academic Curriculum</span>
+            <h2 class="section-title">Courses & <span class="gradient-text">Learning Pathways</span></h2>
+            <p class="section-description">
+              Carefully organized modules designed to build subject mastery from foundational roots to advanced problem-solving.
+            </p>
+          </div>
+          <div class="filter-wrapper" role="tablist" aria-label="Course Categories">
+            <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Subjects</button>
+            <button type="button" class="filter-btn" data-filter="math" role="tab" aria-selected="false">Mathematics</button>
+            <button type="button" class="filter-btn" data-filter="physics-chemistry" role="tab" aria-selected="false">Physics &amp; Chemistry</button>
+            <button type="button" class="filter-btn" data-filter="biology" role="tab" aria-selected="false">Biology &amp; Life Science</button>
+            <button type="button" class="filter-btn" data-filter="gk" role="tab" aria-selected="false">General Knowledge</button>
+            <button type="button" class="filter-btn" data-filter="exam" role="tab" aria-selected="false">Exam Prep</button>
+            <button type="button" class="filter-btn" data-filter="revision" role="tab" aria-selected="false">Concept Revision</button>
+          </div>
+        </div>
+
+        <div class="grid grid-3 course-grid" id="courseCardsContainer">
+          <!-- Course Card 1: Mathematics -->
+          <article class="course-card" data-category="math">
+            <div class="course-card-badge-row">
+              <span class="badge badge-navy">Mathematics</span>
+              <span class="badge badge-light">Core Subject</span>
+            </div>
+            <div class="course-icon-banner math-accent">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m19 5-7 7-7-7"/><path d="m19 19-7-7-7 7"/></svg>
+            </div>
+            <h3 class="course-title">Calculus, Algebra & Geometry</h3>
+            <p class="course-desc">
+              Master functions, differential & integral calculus, linear algebra, coordinate geometry, and probability through deep intuitive steps.
+            </p>
+            <ul class="course-highlights-list">
+              <li>Differential & Integral Calculus</li>
+              <li>Coordinate Geometry & Vectors</li>
+              <li>Probability & Statistical Distributions</li>
+            </ul>
+            <div class="course-card-footer">
+              <span class="course-meta-tag">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Modular Concepts
+              </span>
+              <button type="button" class="btn btn-outline-primary btn-sm view-syllabus-btn" data-course-id="math-foundations" data-course="Mathematics" aria-label="Explore Mathematics">
+                Explore
+              </button>
+            </div>
+          </article>
+
+          <!-- Course Card 2: Physics & Chemistry -->
+          <article class="course-card" data-category="physics-chemistry">
+            <div class="course-card-badge-row">
+              <span class="badge badge-amber">Physics & Chemistry</span>
+              <span class="badge badge-light">Physical Science</span>
+            </div>
+            <div class="course-icon-banner pc-accent">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v7.31L4.1 19.34A2 2 0 0 0 5.82 22h12.36a2 2 0 0 0 1.72-2.66L14 9.31V2"/><line x1="8.5" y1="2" x2="15.5" y2="2"/><line x1="6.8" y1="15" x2="17.2" y2="15"/></svg>
+            </div>
+            <h3 class="course-title">Physics & Chemistry</h3>
+            <p class="course-desc">
+              Build a strong understanding of fundamental concepts in Physics and Chemistry through clear and concept-focused learning.
+            </p>
+            <ul class="course-highlights-list">
+              <li>Physics & Chemistry Principles</li>
+              <li>Physical Science & Basic Concepts</li>
+              <li>Important Formulas & Concept Revision</li>
+            </ul>
+            <div class="course-card-footer">
+              <span class="course-meta-tag">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Physical Science
+              </span>
+              <button type="button" class="btn btn-outline-primary btn-sm view-syllabus-btn" data-course-id="physics-chemistry" data-course="Physics & Chemistry" aria-label="Explore Physics & Chemistry">
+                Explore
+              </button>
+            </div>
+          </article>
+
+          <!-- Course Card 3: Biology & Life Science -->
+          <article class="course-card" data-category="biology">
+            <div class="course-card-badge-row">
+              <span class="badge badge-green">Biology & Life Science</span>
+              <span class="badge badge-light">Life Science</span>
+            </div>
+            <div class="course-icon-banner biology-accent">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+            </div>
+            <h3 class="course-title">Biology & Life Science</h3>
+            <p class="course-desc">
+              Understand living organisms, the human body, plants, animals, and the natural world.
+            </p>
+            <ul class="course-highlights-list">
+              <li>Human Biology & Body Systems</li>
+              <li>Plants, Animals & Biodiversity</li>
+              <li>Nutrition, Health & Ecosystems</li>
+            </ul>
+            <div class="course-card-footer">
+              <span class="course-meta-tag">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Living Systems
+              </span>
+              <button type="button" class="btn btn-outline-primary btn-sm view-syllabus-btn" data-course-id="biology-life-science" data-course="Biology & Life Science" aria-label="Explore Biology & Life Science">
+                Explore
+              </button>
+            </div>
+          </article>
+
+          <!-- Course Card 4: General Knowledge -->
+          <article class="course-card" data-category="gk">
+            <div class="course-card-badge-row">
+              <span class="badge badge-blue">General Knowledge</span>
+              <span class="badge badge-light">Knowledge Bank</span>
+            </div>
+            <div class="course-icon-banner gk-accent">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+            </div>
+            <h3 class="course-title">General Knowledge</h3>
+            <p class="course-desc">
+              Build your knowledge with interesting facts, important discoveries, famous personalities, places, inventions, and world knowledge.
+            </p>
+            <ul class="course-highlights-list">
+              <li>Inventions & Major Discoveries</li>
+              <li>World & Indian Knowledge</li>
+              <li>Famous Personalities & Key Facts</li>
+            </ul>
+            <div class="course-card-footer">
+              <span class="course-meta-tag">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                World & India Awareness
+              </span>
+              <button type="button" class="btn btn-outline-primary btn-sm view-syllabus-btn" data-course-id="general-knowledge" data-course="General Knowledge" aria-label="Explore General Knowledge">
+                Explore
+              </button>
+            </div>
+          </article>
+
+          <!-- Course Card 5: Exam Preparation -->
+          <article class="course-card" data-category="exam">
+            <div class="course-card-badge-row">
+              <span class="badge badge-navy">Exam Preparation</span>
+              <span class="badge badge-light">Strategy</span>
+            </div>
+            <div class="course-icon-banner exam-accent">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+            </div>
+            <h3 class="course-title">Exam Preparation</h3>
+            <p class="course-desc">
+              Targeted frameworks designed to maximize accuracy, manage test anxiety, decode question structures, and avoid negative marking pitfalls.
+            </p>
+            <ul class="course-highlights-list">
+              <li>High-Yield Problem Solving Tactics</li>
+              <li>Time Allocation & Mock Test Frameworks</li>
+              <li>Systematic Error Analysis & Logbooks</li>
+            </ul>
+            <div class="course-card-footer">
+              <span class="course-meta-tag">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                High-Yield Strategy
+              </span>
+              <button type="button" class="btn btn-outline-primary btn-sm view-syllabus-btn" data-course-id="exam-strategy" data-course="Exam Preparation" aria-label="Explore Exam Preparation">
+                Explore
+              </button>
+            </div>
+          </article>
+
+          <!-- Course Card 6: Concept Revision -->
+          <article class="course-card" data-category="revision">
+            <div class="course-card-badge-row">
+              <span class="badge badge-amber">Concept Revision</span>
+              <span class="badge badge-light">Rapid Recall</span>
+            </div>
+            <div class="course-icon-banner revision-accent">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3 class="course-title">Concept Revision</h3>
+            <p class="course-desc">
+              High-density review modules designed for the final weeks before major assessments. Condense weeks of studying into actionable recall blocks.
+            </p>
+            <ul class="course-highlights-list">
+              <li>Comprehensive One-Page Formula Maps</li>
+              <li>Key Concept Traps & Counterexamples</li>
+              <li>Flash Recall & Diagnostic Checkpoints</li>
+            </ul>
+            <div class="course-card-footer">
+              <span class="course-meta-tag">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Quick Review
+              </span>
+              <button type="button" class="btn btn-outline-primary btn-sm view-syllabus-btn" data-course-id="concept-revision" data-course="Concept Revision" aria-label="Explore Concept Revision">
+                Explore
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: LEARNING PROCESS (4-STEP WORKFLOW) -->
+    <section class="section section-process" id="process">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">The Pedagogical Flow</span>
+          <h2 class="section-title">The CONCEPTPE <span class="gradient-text">Learning Process</span></h2>
+          <p class="section-description">
+            A structured four-step methodology crafted to transform ambiguity into absolute confidence.
+          </p>
+        </div>
+
+        <div class="process-timeline">
+          <!-- Step 1 -->
+          <div class="process-card">
+            <div class="process-number">01</div>
+            <div class="process-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+            <h3 class="process-title">Core Discovery</h3>
+            <p class="process-text">
+              Identify the core question behind the topic. Why does this concept exist, and what fundamental problem does it solve?
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="process-card">
+            <div class="process-number">02</div>
+            <div class="process-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3 class="process-title">Visual Deconstruction</h3>
+            <p class="process-text">
+              Break down the mathematical equations or physical models with clear visual logic, diagrams, and intuitive real-world parallels.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="process-card">
+            <div class="process-number">03</div>
+            <div class="process-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3 class="process-title">Targeted Practice</h3>
+            <p class="process-text">
+              Apply the newly internalized concept directly against progressive problem tiers, starting from fundamentals to exam variations.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="process-card">
+            <div class="process-number">04</div>
+            <div class="process-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="process-title">Master Revision</h3>
+            <p class="process-text">
+              Lock in long-term retention using formula mind-maps, quick recall checklists, and periodic retrieval practice.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: VIDEOS -->
+    <section class="section section-videos" id="videos">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header-left">
+            <span class="section-eyebrow">Visual Learning</span>
+            <h2 class="section-title">Video <span class="gradient-text">Lectures & Tutorials</span></h2>
+            <p class="section-description">
+              In-depth explanations produced for clarity. Explore our static video catalogue and join our community on YouTube.
+            </p>
+          </div>
+          <a href="https://www.youtube.com/@Conceptpe" target="_blank" rel="noopener noreferrer" class="btn btn-outline-youtube">
+            <svg class="icon-youtube" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+            <span>Subscribe @Conceptpe</span>
+          </a>
+        </div>
+
+        <!-- Video Filter Tabs -->
+        <div class="video-filter-bar" role="tablist" aria-label="Video Subject Filter">
+          <button type="button" class="filter-btn active" data-video-filter="all">All Lectures</button>
+          <button type="button" class="filter-btn" data-video-filter="math">Mathematics</button>
+          <button type="button" class="filter-btn" data-video-filter="science">Science</button>
+          <button type="button" class="filter-btn" data-video-filter="strategy">Exam Strategy</button>
+        </div>
+
+        <!-- Video Grid -->
+        <div class="grid grid-3 video-grid" id="videoGridContainer">
+          <!-- Video Card 1 -->
+          <article class="video-card" data-video-category="math">
+            <div class="video-thumbnail-box">
+              <div class="thumbnail-placeholder math-thumb">
+                <div class="thumb-graphics">
+                  <span class="thumb-symbol">∫ f(x) dx</span>
+                  <span class="thumb-topic">Calculus Demystified</span>
+                </div>
+              </div>
+              <div class="video-duration-badge">18:45</div>
+              <a href="https://www.youtube.com/@Conceptpe" target="_blank" rel="noopener noreferrer" class="video-play-overlay" aria-label="Play Calculus Fundamentals">
+                <div class="play-icon-circle">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+              </a>
+            </div>
+            <div class="video-content">
+              <div class="video-meta-row">
+                <span class="badge badge-navy">Mathematics</span>
+                <span class="video-level">Foundation</span>
+              </div>
+              <h3 class="video-card-title">Calculus Fundamentals: Geometric Meaning of Derivatives</h3>
+              <p class="video-card-desc">
+                An intuitive visual derivation of limits, tangent lines, and rate of change without memorizing dry formulas.
+              </p>
+              <div class="video-card-footer">
+                <a href="https://www.youtube.com/@Conceptpe" target="_blank" rel="noopener noreferrer" class="btn btn-youtube-sm w-full">
+                  <svg class="icon-youtube" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                  <span>Watch on YouTube</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Video Card 2 -->
+          <article class="video-card" data-video-category="science">
+            <div class="video-thumbnail-box">
+              <div class="thumbnail-placeholder science-thumb">
+                <div class="thumb-graphics">
+                  <span class="thumb-symbol">F = ma</span>
+                  <span class="thumb-topic">Newtonian Mechanics</span>
+                </div>
+              </div>
+              <div class="video-duration-badge">24:12</div>
+              <a href="https://www.youtube.com/@Conceptpe" target="_blank" rel="noopener noreferrer" class="video-play-overlay" aria-label="Play Newtonian Mechanics">
+                <div class="play-icon-circle">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+              </a>
+            </div>
+            <div class="video-content">
+              <div class="video-meta-row">
+                <span class="badge badge-green">Science</span>
+                <span class="video-level">Core Concept</span>
+              </div>
+              <h3 class="video-card-title">Newton's Laws of Motion: Free Body Diagrams Made Simple</h3>
+              <p class="video-card-desc">
+                Step-by-step breakdown of tension, normal reaction, and friction forces with comprehensive solved cases.
+              </p>
+              <div class="video-card-footer">
+                <a href="https://www.youtube.com/@Conceptpe" target="_blank" rel="noopener noreferrer" class="btn btn-youtube-sm w-full">
+                  <svg class="icon-youtube" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                  <span>Watch on YouTube</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Video Card 4 -->
+          <article class="video-card" data-video-category="science">
+            <div class="video-thumbnail-box">
+              <div class="thumbnail-placeholder science-thumb">
+                <div class="thumb-graphics">
+                  <span class="thumb-symbol">ΔG = ΔH - TΔS</span>
+                  <span class="thumb-topic">Thermodynamics</span>
+                </div>
+              </div>
+              <div class="video-duration-badge">21:50</div>
+              <a href="https://www.youtube.com/@Conceptpe" target="_blank" rel="noopener noreferrer" class="video-play-overlay" aria-label="Play Gibbs Free Energy">
+                <div class="play-icon-circle">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+              </a>
+            </div>
+            <div class="video-content">
+              <div class="video-meta-row">
+                <span class="badge badge-green">Science</span>
+                <span class="video-level">Chemistry</span>
+              </div>
+              <h3 class="video-card-title">Chemical Thermodynamics: Gibbs Free Energy & Spontaneity</h3>
+              <p class="video-card-desc">
+                Understanding entropy, enthalpy, and temperature equilibrium relationships with intuitive molecular diagrams.
+              </p>
+              <div class="video-card-footer">
+                <a href="https://www.youtube.com/@Conceptpe" target="_blank" rel="noopener noreferrer" class="btn btn-youtube-sm w-full">
+                  <svg class="icon-youtube" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                  <span>Watch on YouTube</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Video Card 5 -->
+          <article class="video-card" data-video-category="math">
+            <div class="video-thumbnail-box">
+              <div class="thumbnail-placeholder math-thumb">
+                <div class="thumb-graphics">
+                  <span class="thumb-symbol">det(A - λI) = 0</span>
+                  <span class="thumb-topic">Linear Algebra</span>
+                </div>
+              </div>
+              <div class="video-duration-badge">19:15</div>
+              <a href="https://www.youtube.com/@Conceptpe" target="_blank" rel="noopener noreferrer" class="video-play-overlay" aria-label="Play Eigenvalues Intuition">
+                <div class="play-icon-circle">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+              </a>
+            </div>
+            <div class="video-content">
+              <div class="video-meta-row">
+                <span class="badge badge-navy">Mathematics</span>
+                <span class="video-level">Linear Algebra</span>
+              </div>
+              <h3 class="video-card-title">Eigenvalues & Eigenvectors: Geometric Transformation Visualized</h3>
+              <p class="video-card-desc">
+                What does a matrix really do to space? Understand span, transformations, and invariant axes visually.
+              </p>
+              <div class="video-card-footer">
+                <a href="https://www.youtube.com/@Conceptpe" target="_blank" rel="noopener noreferrer" class="btn btn-youtube-sm w-full">
+                  <svg class="icon-youtube" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                  <span>Watch on YouTube</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Video Card 6 -->
+          <article class="video-card" data-video-category="strategy">
+            <div class="video-thumbnail-box">
+              <div class="thumbnail-placeholder exam-thumb">
+                <div class="thumb-graphics">
+                  <span class="thumb-symbol">3-Pass Strategy</span>
+                  <span class="thumb-topic">Exam Mastery</span>
+                </div>
+              </div>
+              <div class="video-duration-badge">14:20</div>
+              <a href="https://www.youtube.com/@Conceptpe" target="_blank" rel="noopener noreferrer" class="video-play-overlay" aria-label="Play 3-Pass Exam Technique">
+                <div class="play-icon-circle">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+              </a>
+            </div>
+            <div class="video-content">
+              <div class="video-meta-row">
+                <span class="badge badge-amber">Exam Strategy</span>
+                <span class="video-level">Methodology</span>
+              </div>
+              <h3 class="video-card-title">The 3-Pass Exam Technique: Maximizing Marks Under Pressure</h3>
+              <p class="video-card-desc">
+                How to triage questions, lock in guaranteed points first, and eliminate time-draining pitfalls on exam day.
+              </p>
+              <div class="video-card-footer">
+                <a href="https://www.youtube.com/@Conceptpe" target="_blank" rel="noopener noreferrer" class="btn btn-youtube-sm w-full">
+                  <svg class="icon-youtube" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                  <span>Watch on YouTube</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Video Card 7 -->
+          <article class="video-card" data-video-category="gk">
+            <div class="video-thumbnail-box">
+              <div class="thumbnail-placeholder math-thumb">
+                <div class="thumb-graphics">
+                  <span class="thumb-symbol">GK</span>
+                  <span class="thumb-topic">General Knowledge</span>
+                </div>
+              </div>
+              <div class="video-duration-badge">16:45</div>
+              <a href="https://www.youtube.com/@Conceptpe" target="_blank" rel="noopener noreferrer" class="video-play-overlay" aria-label="Play General Knowledge">
+                <div class="play-icon-circle">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+              </a>
+            </div>
+            <div class="video-content">
+              <div class="video-meta-row">
+                <span class="badge badge-navy">General Knowledge</span>
+                <span class="video-level">World &amp; Facts</span>
+              </div>
+              <h3 class="video-card-title">General Knowledge</h3>
+              <p class="video-card-desc">
+                Explore interesting facts, important topics, and knowledge about the world around us.
+              </p>
+              <div class="video-card-footer">
+                <a href="https://www.youtube.com/@Conceptpe" target="_blank" rel="noopener noreferrer" class="btn btn-youtube-sm w-full">
+                  <svg class="icon-youtube" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                  <span>Watch on YouTube</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: STUDY RESOURCES -->
+    <section class="section section-resources" id="resources">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header-left">
+            <span class="section-eyebrow">Academic Library</span>
+            <h2 class="section-title">Study <span class="gradient-text">Resources & Guides</span></h2>
+            <p class="section-description">
+              Curated materials designed to accompany your study sessions, test revisions, and conceptual deep-dives.
+            </p>
+          </div>
+          <div class="resource-filter-pills" role="tablist" aria-label="Resource Filter">
+            <button type="button" class="filter-btn active" data-resource-filter="all">All Resources</button>
+            <button type="button" class="filter-btn" data-resource-filter="notes">Notes</button>
+            <button type="button" class="filter-btn" data-resource-filter="practice">Practice Questions</button>
+            <button type="button" class="filter-btn" data-resource-filter="revision">Revision Material</button>
+            <button type="button" class="filter-btn" data-resource-filter="concepts">Important Concepts</button>
+            <button type="button" class="filter-btn" data-resource-filter="exam">Exam Preparation</button>
+          </div>
+        </div>
+
+        <div class="grid grid-3 resource-grid" id="resourceCardsContainer">
+          <!-- Resource 1: Notes -->
+          <article class="resource-card" data-resource-type="notes">
+            <div class="resource-icon-wrap icon-navy">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <div class="resource-card-meta">
+              <span class="badge badge-navy">Comprehensive Notes</span>
+              <span class="resource-format">Structured PDF</span>
+            </div>
+            <h3 class="resource-title">Chapter-wise Comprehensive Notes</h3>
+            <p class="resource-desc">
+              Exhaustive concept breakdowns with highlighted definitions, step-by-step mathematical proofs, and visual callout boxes.
+            </p>
+            <div class="resource-details">
+              <span class="resource-tag">All Subjects</span>
+              <span class="resource-tag">Chapter Summaries</span>
+            </div>
+            <button type="button" class="btn btn-outline-primary btn-sm w-full resource-action-btn" data-resource-name="Chapter-wise Comprehensive Notes">
+              Access Notes
+            </button>
+          </article>
+
+          <!-- Resource 2: Practice Questions -->
+          <article class="resource-card" data-resource-type="practice">
+            <div class="resource-icon-wrap icon-green">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="m9 14 2 2 4-4"/></svg>
+            </div>
+            <div class="resource-card-meta">
+              <span class="badge badge-green">Practice Questions</span>
+              <span class="resource-format">Graded Tiers</span>
+            </div>
+            <h3 class="resource-title">Graded Practice Problem Sets</h3>
+            <p class="resource-desc">
+              Tiered question banks from foundational level to advanced competitive questions, each accompanied by detailed logical solutions.
+            </p>
+            <div class="resource-details">
+              <span class="resource-tag">Solved Examples</span>
+              <span class="resource-tag">Self-Assessment</span>
+            </div>
+            <button type="button" class="btn btn-outline-primary btn-sm w-full resource-action-btn" data-resource-name="Graded Practice Problem Sets">
+              Access Practice Sets
+            </button>
+          </article>
+
+          <!-- Resource 3: Revision Material -->
+          <article class="resource-card" data-resource-type="revision">
+            <div class="resource-icon-wrap icon-amber">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <div class="resource-card-meta">
+              <span class="badge badge-amber">Revision Material</span>
+              <span class="resource-format">Quick Reference</span>
+            </div>
+            <h3 class="resource-title">Formula Maps & Rapid Cheatsheets</h3>
+            <p class="resource-desc">
+              Condensed single-sheet formula compendiums and key relation maps organized for high-speed retention before tests.
+            </p>
+            <div class="resource-details">
+              <span class="resource-tag">Quick Recall</span>
+              <span class="resource-tag">Print-Ready</span>
+            </div>
+            <button type="button" class="btn btn-outline-primary btn-sm w-full resource-action-btn" data-resource-name="Formula Maps & Rapid Cheatsheets">
+              Access Revision Maps
+            </button>
+          </article>
+
+          <!-- Resource 4: Important Concepts -->
+          <article class="resource-card" data-resource-type="concepts">
+            <div class="resource-icon-wrap icon-blue">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            </div>
+            <div class="resource-card-meta">
+              <span class="badge badge-blue">Important Concepts</span>
+              <span class="resource-format">Deep Dives</span>
+            </div>
+            <h3 class="resource-title">High-Yield Concept Compendium</h3>
+            <p class="resource-desc">
+              Deep analyses of notoriously difficult and recurring academic topics that frequently determine higher percentile rankings.
+            </p>
+            <div class="resource-details">
+              <span class="resource-tag">High-Yield</span>
+              <span class="resource-tag">Conceptual Clarity</span>
+            </div>
+            <button type="button" class="btn btn-outline-primary btn-sm w-full resource-action-btn" data-resource-name="High-Yield Concept Compendium">
+              Access Concepts
+            </button>
+          </article>
+
+          <!-- Resource 5: Exam Preparation -->
+          <article class="resource-card" data-resource-type="exam">
+            <div class="resource-icon-wrap icon-navy">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div class="resource-card-meta">
+              <span class="badge badge-navy">Exam Preparation</span>
+              <span class="resource-format">Study Blueprint</span>
+            </div>
+            <h3 class="resource-title">Exam Blueprints & Checklist Kits</h3>
+            <p class="resource-desc">
+              Strategic test-taking blueprints, topic weightage breakdowns, past pattern evaluations, and syllabus completion trackers.
+            </p>
+            <div class="resource-details">
+              <span class="resource-tag">Curriculum Aligned</span>
+              <span class="resource-tag">Strategy</span>
+            </div>
+            <button type="button" class="btn btn-outline-primary btn-sm w-full resource-action-btn" data-resource-name="Exam Blueprints & Checklist Kits">
+              Access Blueprints
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: ABOUT CONCEPTPE -->
+    <section class="section section-about" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-content">
+            <span class="section-eyebrow">Our Mission & Values</span>
+            <h2 class="section-title">About <span class="gradient-text">CONCEPTPE</span></h2>
+            <p class="about-lead">
+              CONCEPTPE is an education-focused learning platform built on a singular conviction: <em>real academic progress starts when concepts are genuinely understood rather than simply memorized.</em>
+            </p>
+            <p class="about-body">
+              Every day, countless students encounter complex formulas and intricate theories that seem insurmountable. CONCEPTPE exists to demystify these subjects. By reconstructing academic syllabi into intuitive, visual, and logic-driven modules, we empower students to build lasting foundations.
+            </p>
+
+            <div class="about-pillars">
+              <div class="about-pillar-card">
+                <div class="pillar-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <div>
+                  <h4 class="pillar-title">Pedagogical Integrity</h4>
+                  <p class="pillar-text">Strict adherence to clarity, academic depth, and correct underlying derivations.</p>
+                </div>
+              </div>
+
+              <div class="about-pillar-card">
+                <div class="pillar-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div>
+                  <h4 class="pillar-title">Student-First Approach</h4>
+                  <p class="pillar-text">Accessible explanations designed to eliminate learning friction and inspire self-confidence.</p>
+                </div>
+              </div>
+
+              <div class="about-pillar-card">
+                <div class="pillar-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                </div>
+                <div>
+                  <h4 class="pillar-title">Continuous Learning</h4>
+                  <p class="pillar-text">Regularly updated study frameworks, lectures, and resources aligned with evolving curricula.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-visual">
+            <div class="about-badge-card">
+              <div class="about-logo-frame">
+                <img src="assets/images/conceptpe-logo.png" alt="CONCEPTPE Official Emblem" class="about-logo" width="120" height="120" loading="lazy">
+              </div>
+              <h3 class="about-card-title">CONCEPTPE</h3>
+              <p class="about-card-tagline">“Unlock Your Potential”</p>
+              <div class="about-quote-box">
+                <p class="about-quote">
+                  “When understanding precedes practice, excellence is a natural outcome.”
+                </p>
+              </div>
+              <div class="about-card-footer">
+                <a href="#courses" class="btn btn-primary w-full">Explore Academic Topics</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: YOUTUBE CTA BANNER -->
+    <section class="section section-youtube-cta" id="youtube-cta">
+      <div class="container">
+        <div class="youtube-cta-card">
+          <div class="youtube-cta-content">
+            <div class="yt-badge">
+              <svg class="icon-youtube" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              <span>Official YouTube Channel</span>
+            </div>
+            <h2 class="yt-cta-title">Watch, Learn & Master on YouTube</h2>
+            <p class="yt-cta-desc">
+              Subscribe to the official <strong>@Conceptpe</strong> YouTube channel for regular conceptual tutorials, exam strategies, and topic breakdowns.
+            </p>
+            <div class="yt-cta-actions">
+              <a href="https://www.youtube.com/@Conceptpe" target="_blank" rel="noopener noreferrer" class="btn btn-youtube-solid">
+                <svg class="icon-youtube" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                <span>Visit @Conceptpe on YouTube</span>
+              </a>
+              <span class="yt-cta-subtext">Free educational content accessible to all students</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: CONTACT -->
+    <section class="section section-contact" id="contact">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Get in Touch</span>
+          <h2 class="section-title">Connect with <span class="gradient-text">CONCEPTPE</span></h2>
+          <p class="section-description">
+            Have questions about topics, educational suggestions, or feedback? Send us a message and our team will get back to you.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Cards -->
+          <div class="contact-info-column">
+            <div class="contact-info-card">
+              <div class="contact-icon-box icon-navy">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <h4 class="info-card-title">Educational Inquiries</h4>
+                <p class="info-card-desc">For general academic questions, curriculum suggestions, and feedback.</p>
+                <span class="info-card-detail">support@conceptpe.edu</span>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-icon-box icon-green">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <div>
+                <h4 class="info-card-title">Topic Requests</h4>
+                <p class="info-card-desc">Suggest a mathematical derivation or scientific concept you want covered.</p>
+                <span class="info-card-detail">topics@conceptpe.edu</span>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-icon-box icon-amber">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <div>
+                <h4 class="info-card-title">Digital Community</h4>
+                <p class="info-card-desc">Engage with video lecture comment discussions on YouTube.</p>
+                <a href="https://www.youtube.com/@Conceptpe" target="_blank" rel="noopener noreferrer" class="info-card-link">youtube.com/@Conceptpe &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-card">
+            <h3 class="form-title">Send a Message</h3>
+            <p class="form-subtitle">Fill in the details below. We value constructive student and academic feedback.</p>
+
+            <!-- Feedback Toast / Alert -->
+            <div class="form-status-alert" id="formStatusAlert" role="alert" style="display: none;"></div>
+
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contactName" class="form-label">Full Name <span class="required-mark">*</span></label>
+                <input type="text" id="contactName" name="name" class="form-input" placeholder="e.g. Alex Johnson" required autocomplete="name">
+                <span class="field-error" id="nameError" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail" class="form-label">Email Address <span class="required-mark">*</span></label>
+                <input type="email" id="contactEmail" name="email" class="form-input" placeholder="e.g. alex@example.com" required autocomplete="email">
+                <span class="field-error" id="emailError" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject" class="form-label">Subject / Academic Area</label>
+                <select id="contactSubject" name="subject" class="form-select">
+                  <option value="general">General Educational Inquiry</option>
+                  <option value="math">Mathematics Questions</option>
+                  <option value="science">Science Concepts</option>
+                  <option value="cs">Computer Science & Algorithms</option>
+                  <option value="resources">Study Material Feedback</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" class="form-label">Message <span class="required-mark">*</span></label>
+                <textarea id="contactMessage" name="message" class="form-textarea" rows="4" placeholder="Share your question, request, or feedback here..." required></textarea>
+                <div class="textarea-footer">
+                  <span class="field-error" id="messageError" aria-live="polite"></span>
+                  <span class="char-counter" id="charCounter">0 / 500</span>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-full" id="contactSubmitBtn">
+                <span>Send Message</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand-column">
+          <a href="#home" class="footer-brand" aria-label="CONCEPTPE Home">
+            <div class="footer-logo-frame">
+              <img src="assets/images/conceptpe-logo.png" alt="CONCEPTPE Logo" class="footer-logo" width="40" height="40" loading="lazy">
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">CONCEPT<span class="brand-accent">PE</span></span>
+              <span class="brand-tagline">Unlock Your Potential</span>
+            </div>
+          </a>
+          <p class="footer-brand-desc">
+            CONCEPTPE is committed to delivering concept-first educational resources, structured study notes, and intuitive video explanations for learners worldwide.
+          </p>
+          <div class="footer-youtube-link-wrap">
+            <a href="https://www.youtube.com/@Conceptpe" target="_blank" rel="noopener noreferrer" class="footer-yt-btn">
+              <svg class="icon-youtube" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              <span>Watch on YouTube @Conceptpe</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links-column">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-column">
+          <h4 class="footer-heading">Core Subjects</h4>
+          <ul class="footer-list">
+            <li><a href="#courses">Mathematics</a></li>
+            <li><a href="#courses">Science Foundations</a></li>
+            <li><a href="#courses">Computer Science</a></li>
+            <li><a href="#courses">Exam Preparation</a></li>
+            <li><a href="#courses">Concept Revision</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-column">
+          <h4 class="footer-heading">Study Resources</h4>
+          <ul class="footer-list">
+            <li><a href="#resources">Comprehensive Notes</a></li>
+            <li><a href="#resources">Practice Questions</a></li>
+            <li><a href="#resources">Revision Material</a></li>
+            <li><a href="#resources">Important Concepts</a></li>
+            <li><a href="#resources">Exam Strategy Blueprints</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; <span id="currentYear">2026</span> CONCEPTPE. All rights reserved. “Unlock Your Potential”.
+        </p>
+        <div class="footer-badge">
+          <span>CONCEPTPE Educational Platform</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal for Syllabus / Resource Preview -->
+  <div class="modal-overlay" id="previewModal" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">Educational Syllabus</h3>
+        <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body" id="modalContent">
+        <!-- Injected via JavaScript -->
+      </div>
+      <div class="modal-footer">
+        <a href="https://www.youtube.com/@Conceptpe" target="_blank" rel="noopener noreferrer" class="btn btn-youtube-sm">
+          <svg class="icon-youtube" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          <span>Watch Lectures on YouTube</span>
+        </a>
+        <button type="button" class="btn btn-subtle" id="modalCloseActionBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top" id="backToTopBtn" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
